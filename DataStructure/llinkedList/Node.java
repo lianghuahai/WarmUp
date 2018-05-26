@@ -1,8 +1,11 @@
-package LinkedList;
+package llinkedList;
 
 public class Node {
+    //member
     private int data;
     private Node next;
+    
+    //method
     public int getData() {
         return data;
     }
@@ -15,5 +18,5 @@ public class Node {
     public void setNext(Node next) {
         this.next = next;
     }
-    
+
 }
