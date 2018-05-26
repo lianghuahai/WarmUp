@@ -31,7 +31,27 @@ public class LinkedList {
         }
         System.out.println(ref.getData());
     }
-    
+    public void insertAtStart(int data){
+        Node node = new Node();
+        node.setData(data);
+        node.setNext(this.head);
+        this.head = node;
+    }
+    public void delete(int index){
+        if(index==0){
+            this.head=head.getNext();
+        }else{
+            Node n = this.head;
+            Node nextNode = null;
+            for (int i = 0; i < index-1; i++) {
+                n=n.getNext();
+            }
+            nextNode= n.getNext();
+            n.setNext(nextNode.getNext());
+            nextNode=null;
+        }
+        
+    }
     
     
     
