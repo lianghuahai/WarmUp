@@ -11,10 +11,20 @@ public class Main {
 //        stack.pop();
 //        stack.display();
         BST bst = new BST();
-        bst.insert(1);
-        bst.insert(2);
-        bst.insert(3);
-        bst.display();
+        //11, 6, 8, 19, 4, 10, 5, 17, 43, 49, 31  test
+        bst.insert(11);
+        bst.insert(6);
+        bst.insert(8);
+        bst.insert(19);
+        bst.insert(4);
+        bst.insert(10);
+        bst.insert(5);
+        bst.insert(17);
+        bst.insert(43);
+        bst.insert(49);
+        bst.insert(31);
+        bst.displayInOrder();
+        
     }
 
 }
