@@ -1,5 +1,10 @@
 package stack;
 
+/**
+ * 
+ * @author admin
+ *   Implement stack  using Array
+ */
 public class Stack {
     public int []stack = new int[5];
     public int top = 0;
