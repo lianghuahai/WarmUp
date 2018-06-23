@@ -17,7 +17,7 @@ public class MergeSort {
         list.add(11);
         list.add(32);
         list.add(27);
-        list.add(4);
+//        list.add(4);
         for (Integer integer : list) {
             System.out.print(integer+" ");
         }
