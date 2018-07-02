@@ -71,7 +71,7 @@ public class Problem17 {
         return result;
     }
 
-    
+    //FIFO   
     public static List<String> letterCombinations3(String digits) {
         LinkedList<String> ans = new LinkedList<String>();
         if(digits.isEmpty()) return ans;
