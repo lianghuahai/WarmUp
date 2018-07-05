@@ -19,21 +19,23 @@ public class Problem78 {
 //        for (List<Integer> list : subsets2) {
 //            System.out.println(list);
 //        }
-        Map<Character,Integer> mapping = new HashMap<Character,Integer>();
-        List<Integer>[] bucket = new List[nums.length + 1];
-        String  s = "leetcode";
-        for(int i =0;i<s.length();i++){
-            if(mapping.get(s.charAt(i))!=null){
-                mapping.put(s.charAt(i),mapping.get(s.charAt(i))+1);
-            }else{
-                  mapping.put(s.charAt(i),1);
-            }
-        }
-        for(int i =0;i<s.length();i++){
-            if(mapping.get(s.charAt(i))== 1){
-                System.out.println(i);
-            }
-        }
+        
+        
+//        Map<Character,Integer> mapping = new HashMap<Character,Integer>();
+//        List<Integer>[] bucket = new ArrayList[nums.length + 1];
+//        String  s = "leetcode";
+//        for(int i =0;i<s.length();i++){
+//            if(mapping.get(s.charAt(i))!=null){
+//                mapping.put(s.charAt(i),mapping.get(s.charAt(i))+1);
+//            }else{
+//                  mapping.put(s.charAt(i),1);
+//            }
+//        }
+//        for(int i =0;i<s.length();i++){
+//            if(mapping.get(s.charAt(i))== 1){
+//                System.out.println(i);
+//            }
+//        }
         
     }
     // leetcode  90  Subsets II  [1,2,2]  passed 15/19
