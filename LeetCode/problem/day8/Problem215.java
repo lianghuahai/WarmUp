@@ -24,6 +24,7 @@ public class Problem215 {
     public static int findKthLargest2(int[] nums, int k) {
 
         final PriorityQueue<Integer> pq = new PriorityQueue<>();
+        
         for(int val : nums) {
             pq.offer(val);
 
