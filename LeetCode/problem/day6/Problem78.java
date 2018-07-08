@@ -13,12 +13,12 @@ import java.util.Map;
 public class Problem78 {
     
     public static void main(String[] args) {
-//        int[] nums = new int[]{1,2,2};
+        int[] nums = new int[]{1,2,3};
 //        // TODO Auto-generated method stub
-//        List<List<Integer>> subsets2 = subsets2(nums);
-//        for (List<Integer> list : subsets2) {
-//            System.out.println(list);
-//        }
+        List<List<Integer>> subsets2 = subsets1(nums);
+        for (List<Integer> list : subsets2) {
+            System.out.println(list);
+        }
         
         
 //        Map<Character,Integer> mapping = new HashMap<Character,Integer>();
