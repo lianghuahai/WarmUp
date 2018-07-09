@@ -1,13 +1,22 @@
 package problem.day10;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Problem46 {
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-
+        int[] nums = new int[]{1,1,2};
+//      // TODO Auto-generated method stub
+      List<List<Integer>> subsets2 = permute2(nums);
+      System.out.println(subsets2.size());
+      for (List<Integer> list : subsets2) {
+          for (Integer integer : list) {
+              System.out.print(integer);
+          }
+          System.out.println();
+      }
     }
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> list = new ArrayList<List<Integer>>();
@@ -18,8 +27,27 @@ public class Problem46 {
         
     }
     
-    
-    //others
+    //subsets II
+    public static List<List<Integer>> subsetsWithDup(int[] nums) {
+        Arrays.sort(nums);// array must be sorted!!!! otherwise {4,4,4,1,4}  last 4  cant be skipped
+        List<List<Integer>> list = new ArrayList<>();
+        backtrack(list, new ArrayList<Integer>(), nums, 0);
+        return list;
+    }
+
+    private static void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] nums, int start){
+        if(start<= nums.length){
+            list.add(new ArrayList<>(tempList));
+        }
+        for(int i = start; i < nums.length; i++){
+            if(i > start && nums[i] == nums[i-1]) continue; // skip duplicates
+            tempList.add(nums[i]);
+            backtrack(list, tempList, nums, i + 1);
+            tempList.remove(tempList.size() - 1);
+        }
+    } 
+
+    // permute I
     public static List<List<Integer>> permute1(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
         backtrack(list, new ArrayList<Integer>(), nums);
@@ -38,4 +66,30 @@ public class Problem46 {
            }
         }
      } 
+   // permute II
+     public static List<List<Integer>> permute2(int[] nums) {
+         Arrays.sort(nums);
+         List<List<Integer>> list = new ArrayList<>();
+         backtrack2(list, new ArrayList<Integer>(), nums,new boolean[nums.length]);
+         return list;
+      }
+     private static void backtrack2(List<List<Integer>> list, List<Integer> tempList, int [] nums,boolean[]used){
+         if(nums.length==tempList.size()){
+             list.add(new ArrayList<Integer>(tempList));
+         }
+         for (int i = 0; i < nums.length; i++) {
+//          1.   if( used[i] || i > 0 && nums[i] == nums[i-1] && !used[i - 1]) continue;
+          //2.
+           if(used[i]) continue;
+           if( i > 0 && nums[i] == nums[i-1] && !used[i - 1]) continue;//!used[i - 1] decide if it is going to each permutation, or on the top(first value) 
+            tempList.add(nums[i]);
+            used[i]=true;
+            backtrack2(list, tempList, nums,used);
+            used[i]=false;
+            tempList.remove(tempList.size()-1);
+        }
+     } 
+     
+     
+     
 }
