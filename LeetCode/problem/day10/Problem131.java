@@ -15,17 +15,15 @@ public class Problem131 {
         return list;
      }
     public static void backtracking(List<List<String>> list,List<String> tempList,String s ,int start){
-           if(start == s.length())
-           list.add(new ArrayList<String>(tempList));
-           else{
-              for(int i = start; i < s.length(); i++){
-                 if(isPalindrome(s, start, i)){
-                    tempList.add(s.substring(start, i + 1));
-                    backtracking(list, tempList, s, i + 1);
-                    tempList.remove(tempList.size() - 1);
-                 }
-              }
-           }
+          if(start == s.length())
+          list.add(new ArrayList<String>(tempList));
+          for(int i = start; i < s.length(); i++){
+             if(isPalindrome(s, start, i)){
+                tempList.add(s.substring(start, i + 1));
+                backtracking(list, tempList, s, i + 1);
+                tempList.remove(tempList.size() - 1);
+             }
+          }
     }
     public static boolean isPalindrome(String s, int low, int high){
        while(low < high)
