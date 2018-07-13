@@ -2,6 +2,8 @@ package problem.day13;
 
 public class Problem53 {
     //if  current sum is negative , we will drop it and start next value!
+    // else , current sum += next value
+    // and max sum = max(curren, maxsum)
     public static void main(String[] args) {
         int []nums = new int[]{-2,1,-3,4,-1,2,1,-5,4};
         int maxSubArray = maxSubArray(nums);
