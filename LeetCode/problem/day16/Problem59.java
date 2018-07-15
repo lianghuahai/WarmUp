@@ -3,13 +3,18 @@ package problem.day16;
 public class Problem59 {
 
     public static void main(String[] args) {
-        int[][] generateMatrix = generateMatrix(3);
-        for (int[] is : generateMatrix) {
-            for (int i : is) {
-                System.out.print(i+" ");
-            }
-            System.out.println();
-        }
+//        int[][] generateMatrix = generateMatrix(3);
+//        for (int[] is : generateMatrix) {
+//            for (int i : is) {
+//                System.out.print(i+" ");
+//            }
+//            System.out.println();
+//        }
+        StringBuffer sb=  new StringBuffer();
+        StringBuffer reverse = sb.reverse();
+        String a ="123";
+        System.out.println(Integer.parseInt(a));
+        
 
     }
     public static int[][] generateMatrix(int n) {
