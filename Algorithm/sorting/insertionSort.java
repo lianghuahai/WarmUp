@@ -3,7 +3,7 @@ package sorting;
 import java.util.ArrayList;
 import java.util.List;
 
-// O(n^2)
+// O(n^2)  index i,  compare i from n-1 to 0 . eg:  index 5, compare 5,4; 4,3; 32; 21;  until 10
 public class insertionSort {
     public static <E> void main(String[] args) {
         List<Integer> list = new ArrayList<Integer>();

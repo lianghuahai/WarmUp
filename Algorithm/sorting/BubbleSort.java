@@ -3,7 +3,7 @@ package sorting;
 import java.util.ArrayList;
 import java.util.List;
 
-//O(n^2)
+//O(n^2) each loop we move the max value to right-most
 public class BubbleSort {
     public static <E> void main(String[] args) {
         List<Integer> list = new ArrayList<Integer>();
