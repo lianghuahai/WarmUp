@@ -7,6 +7,14 @@ public class Problem6 {
         System.out.println(convert);
 
     }
+    /*  first row and last row is the pattern  i  + 2*(numRows - 1) add them up
+    the rows between first and last which they have to add one more character. 
+            the pattern is j+factor-i
+    the outter loop from first row   to last row
+       inner is the pattern 
+     */
+    
+    
     /*
      * 首先访问 行 0 中的所有字符，接着访问 行 1，然后 行 2，依此类推...
                     对于所有整数 kk，

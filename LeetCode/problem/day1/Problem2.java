@@ -87,8 +87,24 @@ public class Problem2 {
         return root;
     }
 
-    //solution 2
+    //solution 2    O(max(m,n))
     // loop two list at the same time
     //whlile(l1!=null || l2!=null){ }
+    /*
+     i=0   2 -> 4 -> 3
+     j=0   5 -> 6 -> 4 -> 5
+     parrallel going,  if  node==null, then set node.val =0, also if carry >0, keep adding
+            while (l1 != null || l2 != null || carry != 0) {
+                 ListNode cur = new ListNode(0);
+                int sum = ((l2 == null) ? 0 : l2.val) + ((l1 == null) ? 0 : l1.val) + carry;
+                cur.val = sum % 10;
+                carry = sum / 10;
+                prev.next = cur;
+                prev = cur;
 
+                l1 = (l1 == null) ? l1 : l1.next;
+                l2 = (l2 == null) ? l2 : l2.next;
+        }
+     * 
+     */
 }

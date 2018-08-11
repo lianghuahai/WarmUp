@@ -10,7 +10,25 @@ public class Problem4 {
         System.out.println(x);
 
     }
-    // mine
+    // my idea
+    /*   https://blog.csdn.net/chen_xinjia/article/details/69258706
+    L1   R1
+    nums1  :  1 3 | 5 6     
+    imin=0       imax = 4 
+    
+    nums2  :  2 4 5| 6 7 8 
+        L2     R2
+    i point to the smaller length of array which is m
+    j point to another
+    the cutting point of i and j should make sure that  #(L1+L2) = #(R1 +R2) or difference between 1
+    L1<=R2 --->  3<=6
+    L2<=R1 --->   5<=5
+    then output
+    n= nums1.len=4, m= nums1.len=6(m < n)  total.len = 10;  mid = (m+n)/2=5
+    the key point is corner case, it is done by elegant!!!!!!!! such as {}empty array and {1,2,4}
+    
+    
+    */
     public static double findMedianSortedArrays1(int[] nums1, int[] nums2) {
         int m = nums1.length;
         int n = nums2.length;

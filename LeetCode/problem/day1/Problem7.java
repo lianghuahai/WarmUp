@@ -11,6 +11,27 @@ class Problem7 {
         System.out.println(reverse);
     }
     
+    //best answer!
+    
+        public int reverse3(int x)
+    {
+        int result = 0;
+    
+        while (x != 0)
+        {
+            int tail = x % 10;
+            int newResult = result * 10 + tail;
+            if ((newResult - tail) / 10 != result)
+            { return 0; }
+            result = newResult;
+            x = x / 10;
+        }
+    
+        return result;
+    }
+  
+    
+    
     public static int reverse(int x) {
         System.out.println(Math.pow(2, 31));
         if(x<(-(Math.pow(2, 31))) || (x>((Math.pow(2, 31))-1))){
