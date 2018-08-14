@@ -13,6 +13,49 @@ public class Problem17 {
         System.out.println(letterCombinations);
 
     }
+    // depth first search  dfs!
+    /*
+     * public List<String> letterCombinations(String digits) {
+        List<String> list = new ArrayList();
+        if(digits.length()==0){
+            return list;
+        }
+        StringBuilder sb = new StringBuilder();
+        combination(sb,digits,0,list);
+        return list;
+    }
+    public void combination(StringBuilder sb ,String digits,int index,List<String> list){
+        // base case
+        if(index==digits.length()){
+            list.add(sb.toString());
+            return ;
+        }
+        String str = mapping[digits.charAt(index)-'0'];
+        //recursion rule
+        for(int i=0;i<str.length();i++){
+            sb.append(str.charAt(i));
+            combination(sb,digits,index+1,list);
+            sb.deleteCharAt(sb.length()-1);
+        }
+        
+    }
+     */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public static List<String> letterCombinations(String digits) {
         Map<Character,String> map= new LinkedHashMap<Character,String>();
         map.put('2',"abc");

@@ -10,7 +10,13 @@ public class Problem9 {
         boolean reverse = isPalindrome(x);
         System.out.println(reverse);
     }
+ // method 1  Revert half of the number   x=x/10,  rev = rev*x%10
+    //eg: length is odd 12321 ->    x=12  rev = 123
+    //eg: length is even 1221 ->    x=12  rev = 12
+    //so  we have to return    (x==rev  || x==rev/10)
     
+    
+    //method2
     public static boolean isPalindrome(int x) {
         if(x<0){
             return false;
