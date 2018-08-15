@@ -4,7 +4,7 @@ import helperClass.ListNode;
 
 public class Problem21 {
 public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        
+        //merge sort 
         ListNode list = new ListNode(-1);
         ListNode root = list;
         while(l1!=null){

@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem22 {
+     public static int count =0;
     public static void main(String[] args) {
-//        List<String> list = generateParenthesis(3);
+        List<String> list = generateParenthesis(3);
+        System.out.println(count);
 //        for (String string : list) {
 //            System.out.println(string);
 //        }
@@ -38,6 +40,7 @@ public class Problem22 {
             return;
         }
         if(left>0){
+            count++;
             backtracking(list, curr+"(",  left-1, right);
         }
         if(left<right){

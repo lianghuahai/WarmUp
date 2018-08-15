@@ -28,7 +28,31 @@ public class Problem23 {
         }
         
     }
-    //mine Algorithm
+    //
+     // method 1 : PriorityQueue O(NlogK)
+     /*   if(lists.length==0 || lists==null)return null;
+    PriorityQueue<ListNode> queue = new PriorityQueue<ListNode>(lists.length,(a,b)->a.val-b.val);
+    
+    ListNode prehead = new ListNode(0);
+    ListNode cur = prehead;
+     for(ListNode list : lists){
+         if(list!=null)queue.add(list);
+     }   
+    
+     while(!queue.isEmpty()){
+         cur.next = queue.poll();
+         cur=cur.next;
+         if(cur.next!=null){
+             queue.add(cur.next);
+         }
+     }
+    return prehead.next;*/
+    
+    
+    
+    
+    
+    //method 2: divide and conquer mine Algorithm
     public static ListNode mergeKLists1(ListNode[] lists) {
         if(lists.length==0 || lists==null){
             return null;
