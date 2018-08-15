@@ -16,7 +16,31 @@ public class Problem24 {
         }
 
     }
+    //method 1  better
     public static ListNode swapPairs(ListNode head) {
+        //  first ->  1 -> 2 -> 3 -> 4
+        //           second
+        //            2 -> 1 -> 3 -> 4
+        //               first second
+        if(head==null||head.next==null)return head;
+        ListNode prehead = new ListNode(0);
+        prehead.next = head;
+        ListNode first  = prehead;
+        ListNode second = first.next;
+        while(second!=null && second.next!=null){
+            ListNode nextfirst = second.next.next;
+            first.next=second.next;
+            second.next.next=second;
+            second.next=nextfirst;
+            first=second;
+            second=second.next;
+            
+        }
+        return prehead.next;
+    }
+    
+    //method 2  
+    public static ListNode swapPairs1(ListNode head) {
         ListNode first = head;
         if(first==null || first.next ==null){
                 return head;

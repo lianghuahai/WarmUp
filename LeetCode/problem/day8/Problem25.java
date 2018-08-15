@@ -18,10 +18,49 @@ public class Problem25 {
         }
         
     }
-    
-    //mine
- // The idea is to recursively reverse every Kth Node.
+    //method 1:  recursion. The idea is to recursively reverse every Kth Node.
+    /* The idea is to recursively reverse every Kth Node.
+    base case : if count!=k  return; 
+    rule :  if count==k   recursion
+    eg: 1 2 3 4 5   , n =2
+     1. recursion is ( 1 ->2 ->3 ) ->4 ->5 ->null
+                      head    cur
+                       
+     2. next recurs   1 ->2 ->(3  ->4 ->5) ->null
+                     head    cur
+                             head     cur
+                           
+     3. next recurs   1 ->2 ->3  ->4 ->(5 ->null)
+                     head    cur
+                             head     cur
+                                      head  cur
+       return head because head is the previous recursion's cur we have to connect them together.
+    */
     public static ListNode reverseKGroup(ListNode head, int k) {
+        if(head==null||head.next==null)return head;
+        int count= 0;
+        ListNode cur=head;
+        while(cur!=null && count!=k){
+            cur=cur.next;
+            count++;
+        }
+        if(count==k){
+            cur=reverseKGroup(cur,k); 
+            while(count-- >0){
+                ListNode temp = head.next;
+                head.next= cur;
+                cur=head;
+                head=temp;
+            }
+            // 
+            head= cur;
+        }
+        return head;
+    }
+    
+    
+    //method2, more code than method 1. same idea 
+    public static ListNode reverseKGroup2(ListNode head, int k) {
         if(head == null){
             return null;
         }

@@ -6,11 +6,11 @@ import java.util.List;
 public class Problem22 {
      public static int count =0;
     public static void main(String[] args) {
-        List<String> list = generateParenthesis(3);
+        List<String> list = generateParenthesis(2);
         System.out.println(count);
-//        for (String string : list) {
-//            System.out.println(string);
-//        }
+        for (String string : list) {
+            System.out.println(string);
+        }
         
         /*  Problem  58
         String s  = "a";
@@ -43,7 +43,8 @@ public class Problem22 {
             count++;
             backtracking(list, curr+"(",  left-1, right);
         }
-        if(left<right){
+        //left>right  right>0
+        if(right>0){
             backtracking(list, curr+")",  left, right-1);
         }
     }
