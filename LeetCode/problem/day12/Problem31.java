@@ -4,12 +4,47 @@ package problem.day12;
 public class Problem31 {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1,2,3};
-        nextPermutation(nums);
-        System.out.println(nums);
+        int[] nums = new int[]{1,3,2};
+        nextPermutation2(nums);
+        for (int i : nums) {
+            System.out.print(i+" ");
+        }
 
     }
-    //mine
+    //idea is to scan the nums from length  to 0, looking for nums[i]<nums[i+1]
+    // if not found,  index = -1 means  the array is decreasing , such as  9 6 5  3 1 , cant find the result, just reverse it!
+    //if found, index =i, scan array.length to index i+1  again, find the closest number higher than it: nums[i]>nums[index]. swap it
+    // then reverse the index i+1 to array.length again.  it is the result.
+    public static void nextPermutation2(int[] nums) {
+        if(nums.length<=1)return;
+        int position = -1;
+        for(int i = nums.length-2;i>=0;i--){
+            if(nums[i]<nums[i+1]){
+                position=i;
+                break;
+                
+            }
+        }
+        if(position>=0){
+            int larger= 0;
+            for(int i =nums.length-1;i>=0;i--){
+                if(nums[i]>nums[position]){
+                    int temp=nums[i];
+                    nums[i]=nums[position];
+                    nums[position]=temp;
+                }
+            }
+        }
+        int left=position+1;
+        int right = nums.length-1;
+        while(left<right){
+            int temp=nums[left];
+            nums[left]=nums[right];
+            nums[right]=temp;
+            left++;
+            right--;
+        }
+    }
     public static void nextPermutation(int[] nums) {
         //eg:   1 2 4 8 7 5 1
         if(nums.length<=1){

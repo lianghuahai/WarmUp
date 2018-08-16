@@ -12,7 +12,6 @@ public class Problem33 {
     }
     
     
-    
     // mine  winning 100%
     // The idea here is to work with partial sorted array. eg   456123, we cut at mid of position 3, which is value 1, 
     // now we compare  Array[leftmost]< Array[mid], if it is true, means left part is sorted, and we could get into left-array to find 
