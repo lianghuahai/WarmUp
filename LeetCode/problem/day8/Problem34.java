@@ -8,6 +8,8 @@ public class Problem34 {
     }
     
     // binary search
+    // if find the index of target , the do left scan and right sacn,
+    // low , high = index,   low to left, and high to right, find the leftmost and rightmost of target.
     public static int[] searchRange(int[] nums, int target) {
         int [] res = new int []{-1,-1};
         if(nums==null ||nums.length==0){
