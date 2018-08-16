@@ -9,7 +9,7 @@ public class Problem32 {
 
     }
     public static int longestValidParentheses(String s) {
-        /* Stack  if ( push just
+        /* Stack  if ( push to stack
          *        if )  two condition, if stack is empty, doesnt have ( to match this ). so valid start = i
          *                             else stack.pop()  then 
          *                                      if stack is empty means stack only has one (     res = Math.max(res,i-start);
