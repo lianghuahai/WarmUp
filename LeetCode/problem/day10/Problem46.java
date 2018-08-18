@@ -7,7 +7,7 @@ import java.util.List;
 public class Problem46 {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1,1,2};
+        int[] nums = new int[]{1,1,1,2};
 //      // TODO Auto-generated method stub
       List<List<Integer>> subsets2 = permute2(nums);
       System.out.println(subsets2.size());
@@ -81,7 +81,7 @@ public class Problem46 {
 //          1.   if( used[i] || i > 0 && nums[i] == nums[i-1] && !used[i - 1]) continue;
           //2.
            if(used[i]) continue;
-           if( i > 0 && nums[i] == nums[i-1] && !used[i - 1]) continue;//!used[i - 1] decide if it is going to each permutation, or on the top(first value) 
+           if( i > 0 && nums[i] == nums[i-1] && !used[i - 1]) continue;//!used[i - 1] decide if it is going to each permutation, or on the top(first value)，意思就是这个如果是循环开始的第一个元素nums[i] == nums[i-1] 就不需要再重复做了，但是如果在别人的case里面（used[i-1]=true就证明前面在做，这时候就不能跳过了） 
             tempList.add(nums[i]);
             used[i]=true;
             backtrack2(list, tempList, nums,used);
