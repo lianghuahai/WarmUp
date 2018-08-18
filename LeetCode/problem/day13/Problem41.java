@@ -8,7 +8,7 @@ public class Problem41 {
         int maxSubArray = firstMissingPositive1(nums);
         System.out.println(maxSubArray);
 
-    }
+    }//
     public static int firstMissingPositive(int[] nums) {
         int i = 0;
         while(i<nums.length){
