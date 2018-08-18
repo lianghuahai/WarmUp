@@ -16,6 +16,13 @@ public class Problem49 {
         
 
     }
+    /*
+     * 重点就是 loop str array一遍，把每个 string转成 char【】然后sort（）一遍，当成key放到map里面
+     * 如果key存在就 map.get().add()放到 value集合里面，如果不存在 就put进去
+     * 
+     * 
+     * 
+     */
     public static List<List<String>> groupAnagrams(String[] strs) {
         List<List<String>> list = new ArrayList<List<String>>();
         if(strs==null||strs.length==0){
