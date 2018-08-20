@@ -8,7 +8,7 @@ public class Problem64 {
     }
     /*
      *  grid[i][j] = min(grid[row-1][col],grid[row][col-1])   +grid[row][col];
-     * 
+     *  
      */
     public int minPathSum(int[][] grid) {
         for(int row = 0;row<grid.length;row++){
