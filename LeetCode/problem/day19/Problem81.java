@@ -15,14 +15,14 @@ public class Problem81 {
             int mid = (end-start)/2+start;
             if(nums[mid]==target){
                 return true;
-            }else if(nums[mid]>nums[start]){ //left part is sorted
+            }else if(nums[mid]>=nums[start]){ //left part is sorted
                 if(nums[mid]>=target && target>=nums[start]){
                     end = mid-1;
                 }else{
                     start = mid+1;
                 }
             }else{  //right part is sorted
-                if(nums[mid+1]<=target && target <=nums[end]){
+                if(nums[mid]<=target && target <=nums[end]){
                     start = mid+1;
                 }else{
                     end = mid-1;
