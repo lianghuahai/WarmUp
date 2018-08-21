@@ -3,7 +3,7 @@ package problem.day19;
 public class Problem91 {
 
     public static void main(String[] args) {
-        System.out.println(numDecodings("123"));
+        System.out.println(numDecodings("122224"));
 
     }
     //recursion rule
@@ -30,17 +30,36 @@ public class Problem91 {
     1   1 2  1+2
   ----------------------
   */
- // iterator + dp    time O(n)   space O(n)
     public static int numDecodings(String s) {
+        // 2    2    2   9   2  6
+        // 1    2    3   3   3  6       case 1:
+        //         num1 num2
+        // 2    2    2   2   2  6
+        // 1    2    3   5   8  13       case 2:
+        //          num1 num2
+        // ###### special case  contains   "0"#######
+        // 2    2    3   0   2  6
+        // 1    2    3   0   0  0       case 3:
+        //          num1 num2
+        // 2    2    2   0   2  6
+        // 1    2    3   3   0  0       case 4:
+        //       num1=0 num2=3
         if(s==null||s.length()==0)return 0;
-        int num1 =0;
-        int num2 =0;
-        
-        
-        
-    
+        if(s.charAt(0)=='0')return 0;
+        int num1 =1;
+        int num2 =1;
+        for(int i=1 ;i<s.length();i++){
+            if(s.charAt(i)=='0'){
+                num2=0;
+            }
+            if(s.charAt(i-1)=='1'||s.charAt(i-1)=='2'&& s.charAt(i)<='6'){
+                num2=num1+num2;
+                num1=num2-num1;
+            }else{
+                num1=num2;
+            }
+        }
         return num2;
-    
     }
     
     
