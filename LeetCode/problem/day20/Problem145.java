@@ -25,6 +25,10 @@ public class Problem145 {
     }
   //method 1 , iteration  using stack
     public static List<Integer> postorderTraversal(TreeNode root) {
+        /* idea is  post-order eg:    984526731
+         *  then , if we travel tree from right to left, we will get totally oppsite,  137625489 
+         *  then,  we could use linkList, because it has a method, addFirst, we dont need to reverse result .
+         */
     LinkedList<Integer> result = new LinkedList<>();
     Deque<TreeNode> stack = new ArrayDeque<>();
     TreeNode p = root;
