@@ -1,6 +1,6 @@
 package problem.day21;
 
-public class Problem117 {
+//public class Problem117 {
     /*
     1 -> NULL   pre->1.left->1.right->1.next.left->1.next.right->....->null
   /  \
@@ -8,8 +8,8 @@ public class Problem117 {
 / \    \
 4-> 5 -> 7 -> NULL
 */
-public void connect(TreeLinkNode root) {
-   TreeLinkNode dummy = new TreeLinkNode(0);
+//public void connect(TreeLinkNode root) {
+   /*TreeLinkNode dummy = new TreeLinkNode(0);
    TreeLinkNode head = dummy;
    while(root!=null){
        if(root.left!=null){
@@ -26,7 +26,7 @@ public void connect(TreeLinkNode root) {
            root=dummy.next;
            dummy.next=null;
        }
-   }
+   }*/
    
-}
-}
+//}
+//}
