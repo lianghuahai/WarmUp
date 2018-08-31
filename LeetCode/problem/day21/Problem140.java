@@ -23,7 +23,7 @@ public class Problem140 {
         if(s.length()==0){
             res.add("");
             return res;
-        }//s = "cat san dog"
+        }//s = "cat sand dog"
                 //wordDict = ["cat","cats","and","sand","dog"]
         for(String str : wordDict){
             if(s.startsWith(str)){
