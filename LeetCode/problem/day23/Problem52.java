@@ -18,12 +18,12 @@ public class Problem52 {
                 dfs(queens,row+1);
             }
           //the reason we dont have to clear queens[row]here is because we just check i to row, 
-         //eg:  [1,3,4,5]  the row=2,  we dont have to bother index 3(value=5) because we dont check it as the loop for(int i=0;i<queens.length;i++){
+         //eg:  [1,3,4,5]  the row=2,  we dont have to bother index 3(value=5) because we avoid checking it by loop for(int i=0;i<queens.length;i++){
         }
     }
     public  boolean isValid(int[]queens,int row){
         for(int i=0;i<row;i++){     //
-            if(queens[i]==queens[row]){// col  check, queens[i] means to check every row before variable 'row'
+            if(queens[i]==queens[row]){// col  check, queens[i](every row) means to check every row before variable 'row'
                 return false;
             }else if(Math.abs(queens[row]-queens[i])==Math.abs(i-row)){ //diagonal check
                 //queens[row]-queens[i])  means  difference between col

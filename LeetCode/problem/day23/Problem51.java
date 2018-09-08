@@ -70,7 +70,7 @@ public class Problem51 {
      */
     public static boolean isValid(int[]queens,int row){
         for(int i=0;i<row;i++){     //
-            if(queens[i]==queens[row]){// col  check, queens[i] means to check every row before variable 'row'
+            if(queens[i]==queens[row]){// col  check, queens[i](every row) means to check every row before variable 'row'
                 return false;
             }else if(Math.abs(queens[row]-queens[i])==Math.abs(i-row)){ //diagonal check
                 //queens[row]-queens[i])  means  difference between col
