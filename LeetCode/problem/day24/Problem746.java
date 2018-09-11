@@ -1,5 +1,7 @@
 package problem.day24;
 
+import java.util.Set;
+
 public class Problem746 {
     public int minCostClimbingStairs(int[] cost) {
         int f1 = 0, f2 = 0;
