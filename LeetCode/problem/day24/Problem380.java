@@ -1,12 +1,21 @@
 package problem.day24;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Random;
+
+import llinkedList.LinkedList;
 
 public class Problem380 {
     public static void main(String[] args) {
         System.out.println(new Random().nextInt(22));
+//        Deque<Integer> stack = (Deque<Integer>) new LinkedList();
+        Deque<Integer> stack = new ArrayDeque<Integer>();
+        
+                
     }
     ArrayList<Integer> nums;
     HashMap<Integer, Integer> locs;
