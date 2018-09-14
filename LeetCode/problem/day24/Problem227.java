@@ -4,7 +4,10 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class Problem227 {
-    public int calculate(String s) {
+    public static void main(String[] args) {
+        calculate("1-2");
+    }
+    public static int calculate(String s) {
         int len;
         if(s==null || (len = s.length())==0) return 0;
         Deque<Integer> stack = new ArrayDeque<Integer>();
