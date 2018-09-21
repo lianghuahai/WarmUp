@@ -1,4 +1,4 @@
-package problem.day4;
+package problem.day1;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
