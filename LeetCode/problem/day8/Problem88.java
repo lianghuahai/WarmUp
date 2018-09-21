@@ -1,4 +1,4 @@
-package problem.day6;
+package problem.day8;
 
 public class Problem88 {
 
