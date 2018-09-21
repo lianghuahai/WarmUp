@@ -17,10 +17,10 @@ public class Problem95 {
             list.add(null);
             return list;
         }
-        if(start == end){
-            list.add(new TreeNode(start));
-            return list;
-        }
+//        if(start == end){
+//            list.add(new TreeNode(start));
+//            return list;
+//        }
         List<TreeNode> left,right;
         for(int i=start;i<=end;i++){
             left = genTrees(start, i-1);
