@@ -1,4 +1,4 @@
-package problem.day10;
+package problem.day3;
 
 import java.util.ArrayList;
 import java.util.List;

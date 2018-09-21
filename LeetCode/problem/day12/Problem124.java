@@ -1,4 +1,4 @@
-package problem.day2;
+package problem.day12;
 
 import helperClass.TreeNode;
 
