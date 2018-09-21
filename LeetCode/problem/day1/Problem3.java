@@ -1,4 +1,4 @@
-package problem.day2;
+package problem.day1;
 
 import java.util.HashMap;
 import java.util.HashSet;
