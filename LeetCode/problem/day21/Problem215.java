@@ -1,4 +1,4 @@
-package problem.day8;
+package problem.day21;
 
 import java.util.PriorityQueue;
 import java.util.Random;
