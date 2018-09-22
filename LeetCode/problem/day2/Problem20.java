@@ -1,7 +1,7 @@
 package problem.day2;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Stack;
 
 public class Problem20 {
 
@@ -10,6 +10,27 @@ public class Problem20 {
 
     }
     public boolean isValid(String s) {
+        // method 1. stack
+        if(s.equals(""))return true;
+        if(s==null || s.length()==1) return false;
+        Stack<Character> stack = new Stack<Character>();
+        for(Character ch : s.toCharArray()){
+            if(ch=='('){
+                stack.push(')');
+            }else if(ch=='{'){
+                stack.push('}');
+            }else if(ch=='['){
+                stack.push(']');
+            }else if(stack.isEmpty()|| stack.pop()!=ch){
+                return false;
+            }
+        }
+        return stack.isEmpty();
+        
+        
+        
+        
+        /* dumb method 2.
         if(s==""){
             return true;
         }
@@ -51,6 +72,7 @@ public class Problem20 {
         if(list.isEmpty()){
                 return true;
         }
-        return false;
+        return false;*/
+    
     }
 }
