@@ -1,7 +1,10 @@
 package problem.day25;
 
 public class Problem908 {
-    public int smallestRangeI(int[] A, int K) {
+    public static void main(String[] args) {
+        smallestRangeI(new int[]{1},0);
+    }
+    public static int smallestRangeI(int[] A, int K) {
         int diff = 0, result = 0, min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
         
         //find min and max in A
