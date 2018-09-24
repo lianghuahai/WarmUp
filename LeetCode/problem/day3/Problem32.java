@@ -1,4 +1,4 @@
-package problem.day17;
+package problem.day3;
 
 import java.util.Stack;
 
