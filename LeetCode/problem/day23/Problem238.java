@@ -1,6 +1,11 @@
 package problem.day23;
 
 public class Problem238 {
+    /*
+     * idea is to loop array from left to right,  get the left product of current value,
+     *       and  loop array from right to left,  get the right product of current value,
+     *    then, times them up, will give the res
+     */
     public int[] productExceptSelf(int[] nums) {
         int res [] = new int [nums.length];
         res[0]=1;
