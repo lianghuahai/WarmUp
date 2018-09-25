@@ -1,4 +1,4 @@
-package problem.day17;
+package problem.day20;
 
 import helperClass.ListNode;
 
