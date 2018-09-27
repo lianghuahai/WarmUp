@@ -1,4 +1,4 @@
-package problem.day21;
+package problem.day11;
 
 public class Problem115 {
     public int numDistinct(String s, String t) {
