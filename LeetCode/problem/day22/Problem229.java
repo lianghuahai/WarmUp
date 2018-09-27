@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem229 {
+    /*
+     * first loop to find two numbers of majority
+     * second loop is to check whether these two numbers are qualify  > (n/3) times
+     * 
+     */
     public List<Integer> majorityElement(int[] nums) {
         List<Integer> res = new ArrayList();
         if(nums.length==0)return res;

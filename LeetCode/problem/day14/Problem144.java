@@ -1,4 +1,4 @@
-package problem.day20;
+package problem.day14;
 
 // Binary Tree preorder Traversal
 public class Problem144 {
