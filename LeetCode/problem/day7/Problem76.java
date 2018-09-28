@@ -1,4 +1,4 @@
-package problem.day19;
+package problem.day7;
 
 public class Problem76 {
     public String minWindow(String s, String t) {
