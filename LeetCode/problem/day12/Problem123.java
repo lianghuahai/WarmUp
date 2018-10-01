@@ -1,4 +1,4 @@
-package problem.day21;
+package problem.day12;
 
 public class Problem123 {
 /*    i   0 1 2 3 4 5 6 7   dp[i][j]means j transaction in  i-th day
