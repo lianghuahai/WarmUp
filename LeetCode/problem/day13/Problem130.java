@@ -1,4 +1,4 @@
-package problem.day21;
+package problem.day13;
 
 public class Problem130 {
     public void solve(char[][] board) {

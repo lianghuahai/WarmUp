@@ -1,4 +1,4 @@
-package problem.day21;
+package problem.day13;
 
 public class Problem132 {
 /*      dp[i][j] = min cut from i to j making string palindrome. eg:  string="abc" , dp[0][2] =2 : a|b|c
