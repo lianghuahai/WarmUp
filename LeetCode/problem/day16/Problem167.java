@@ -1,4 +1,4 @@
-package problem.day22;
+package problem.day16;
 
 public class Problem167 {
     public int[] twoSum(int[] numbers, int target) {
