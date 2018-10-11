@@ -1,4 +1,4 @@
-package problem.day22;
+package problem.day20;
 
 public class Problem204 {
     /*  求0到 n 之内的质数
