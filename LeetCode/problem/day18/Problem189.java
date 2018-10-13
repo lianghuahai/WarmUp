@@ -1,4 +1,4 @@
-package problem.day22;
+package problem.day18;
 
 public class Problem189 {
     /* 1.time O(n) + space O(n)   create a new array to store the nums
